@@ -1,30 +1,27 @@
-// Unordered Set have no ordering -> Hashing
-// Ordered Set having ordering ->Red Black And AVL Tree
-
-// Set is always unique
-
 #include <iostream>
-#include <unordered_set>
+#include <unordered_map>
+
 using namespace std;
 
 int main()
 {
 
-    unordered_set<int> s;
+    unordered_map<string, int> m;
 
-    s.insert(10);
-    s.insert(20);
-    s.insert(30);
-    s.insert(40);
-    s.insert(50);
-    s.insert(60);
+    // Initialize n no order
 
-    for (auto i : s)
+    // First ->key
+    // Second ->Value
+
+    m["gfg"] = 20;
+    
+
+    m.insert({"True", 20});
+
+    for (auto i : m)
     {
-        cout << i << " ";
+        cout << i.first << " " << i.second << endl;
     }
-
-    // Print in any order b/c Unordered set
 
     return 0;
 }
