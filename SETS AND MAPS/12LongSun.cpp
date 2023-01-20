@@ -30,7 +30,7 @@ int solve(int arr[], int n, int target)
         if (m.find(pre_sum - target) != m.end())
         {
 
-            res = max(res, i - m[pre_sum, target]);
+            res = max(res, i - m[pre_sum - target]);
         }
     }
 
