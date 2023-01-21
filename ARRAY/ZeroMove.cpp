@@ -17,6 +17,20 @@ void MovesZeroInRight(int arr[], int n)
     
 }
 
+void movesZero(int arr[], int n){
+
+    // Optimized
+
+    int count =0 ; //cnt of non zero ele
+
+    for(int i=0;i<n;i++){
+        if(arr[i] !=0 ){
+            swap(arr[i], arr[count]);
+            count++;
+        }
+    }
+}
+
 void print(int arr[], int n)
 {
     for (int i = 0; i < n; i++)
@@ -40,7 +54,8 @@ int main()
     {
         cin >> arr[i];
     }
-     MovesZeroInRight(arr, n);
+    //  MovesZeroInRight(arr, n);
+    movesZero(arr,n);
     
     print(arr, n);
     return 0;
