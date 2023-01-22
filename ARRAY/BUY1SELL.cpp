@@ -25,6 +25,23 @@ int maxProfit(int arr[], int n, int s, int e){
 
 }
 
+
+//EAsy n Optimize
+
+int Profit(int arr[], int n ){
+
+    int profit=0;
+
+    for(int i=1;i<n;i++){
+
+        if(arr[i]>arr[i-1]){
+            profit = profit + (arr[i] - arr[i-1]);
+        }
+    }
+    return profit;
+}
+
+
 void print(int arr[], int n)
 {
     for (int i = 0; i < n; i++)
@@ -51,7 +68,8 @@ int main()
         cin >> arr[i];
     }
 
-    int ans = maxProfit(arr, n,s,e);
+    // int ans = maxProfit(arr, n,s,e);
+    int ans = Profit(arr,n);
     cout << "MAximum Difference is " << ans;
     return 0;
 }
