@@ -18,9 +18,10 @@ class Node{
 
 };
 
-Node* insert(Node * head, int data){
+Node* insertAtHead(Node * head, int data){
 
     Node* temp = new Node(data);
+    temp->next = head;
 
     if(head!=NULL){
         head->prev=temp;
@@ -29,12 +30,23 @@ Node* insert(Node * head, int data){
     return temp;
 }
 
+void Print(Node * head){
+
+    Node * temp =head;
+
+    while(temp!=NULL){
+        cout<<temp->data<<" ";
+        temp=temp->next;
+    }
+}
 int main(){
 
     Node *n1 = new Node(10);
     Node *head= n1;
 
-    insert(head,20);
+   head = insertAtHead(head,20);
+
+    Print(head);
 
 
 
