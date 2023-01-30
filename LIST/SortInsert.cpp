@@ -32,7 +32,7 @@ Node * insertSort(Node *head,int x){
         return temp;
     }
     Node* curr =head;
-    while(curr->next!=NULL && curr ->data <x){
+    while(curr->next!=NULL && curr ->next->data <x){
         curr=curr->next;
     }
 
