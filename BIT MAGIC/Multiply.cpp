@@ -20,6 +20,15 @@ int main(){
         ans = a << i;
     }
 
+    // left shift b-1 time
+    // a=5 b=2
+    // 5 : 0 0 ----101
+    // 2 : 0 0 ----010
+    // ans:10: 
+    // left shift a << b-1 times
+    // 000 101
+    //first left shift 0000  1010 (10 )
+    // ans 
     cout<<ans;
 
     return 0;
